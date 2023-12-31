@@ -2,8 +2,8 @@
 //    FILE: unit_test_001.cpp
 //  AUTHOR: Rob Tillaart
 //    DATE: 2020-12-03
-// PURPOSE: unit tests for the DS18B20_INT library
-//          https://github.com/RobTillaart/DS18B20_INT
+// PURPOSE: unit tests for the DS2401 library
+//          https://github.com/RobTillaart/DS2401
 //          https://github.com/Arduino-CI/arduino_ci/blob/master/REFERENCE.md
 //
 
@@ -40,6 +40,7 @@ unittest_teardown()
 }
 
 
+//  need mockup
 unittest(test_constructor)
 {
   OneWire oneWire(4);
@@ -47,7 +48,7 @@ unittest(test_constructor)
 
   DS2401 ds(&oneWire);
 
-  ds.begin();
+  assertFalse(ds.begin());
   ds.getUID(buffer);
   assertEqual(buffer[0], 0x00);
 }
