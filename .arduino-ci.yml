@@ -21,7 +21,7 @@ compile:
     # - zero
     # - leonardo
     - m4
-    - esp32
+    # - esp32     //  pretty strict compiler
     - esp8266
     # - mega2560
     - rpipico
