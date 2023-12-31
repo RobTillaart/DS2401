@@ -1,7 +1,7 @@
 {
   "name": "DS2401",
   "keywords": "",
-  "description": "Library for DS2401 UID restricted to a single devcie per pin.",
+  "description": "Library for DS2401 UID restricted to a single device per pin.",
   "authors":
   [
     {

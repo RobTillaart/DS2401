@@ -51,6 +51,7 @@ Known family bytes, there are many other 1-Wire devices with unknown family.
 #### Related
 
 - https://github.com/RobTillaart/DS2401
+- https://github.com/RobTillaart/DS28CM00    (I2C)
 - https://github.com/RobTillaart/UUID
 - https://github.com/RobTillaart/DS18B20_INT
 - https://github.com/RobTillaart/DS18B20_RT
@@ -105,16 +106,17 @@ When the wires are longer this resistor needs to be smaller.
 #### Should
 
 - example of compare function.
+- test with different hardware.
 
 #### Could
 
-- performance test. (fetching)
-- use only 48 unique bits instead of all 64? saves 2 bytes.
+- performance test. (mainly fetching)
+- use only 48 unique bits instead of all 64? 
   - add **getUID48()** and **compareUID48()**
 
 #### Wont
 
-- get any subset of the 8 bytes?
+- get any subset of the 8 bytes? => user can do this.
 
 
 ## Support
