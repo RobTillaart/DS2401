@@ -106,11 +106,10 @@ The 4 bytes interface only uses 4 bytes of the unique part of the address.
 These functions are added as it allows to copy the number directly into a
 uint32_t variable.
 
-- **void getUID4(uint8_t \* buffer)** copies 4 bytes of the found UID (32 bits) in 
-**begin()** to a buffer which should be at least 4 bytes.
-buffer could be the address of an uint32_t variable.
-- **bool compareUID4(uint8_t \* buffer)** compares the buffer (4 bytes) 
-with 4 bytes of the internal UID.
+- **void getUID4(uint32_t \* buffer)** copies 4 unique bytes of the found UID 
+to a uint32_t variable.
+- **bool compareUID4(uint32_t \* buffer)** compares the uint32_t variable
+with 4 unique bytes of the internal UID.
 Returns true if they are identical.
 
 
@@ -139,10 +138,12 @@ When the wires are longer this resistor needs to be smaller.
 #### Must
 
 - Improve documentation.
+- test with different hardware.
+- verify UID4 interface with hardware
+
 
 #### Should
 
-- test with different hardware.
 
 #### Could
 

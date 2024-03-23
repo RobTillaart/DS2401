@@ -25,10 +25,10 @@ void setup()
 
   ds24.begin();  //  read UID
   Serial.print("\ngetUID4:\t ");
-  ds24.getUID4(uid);
+  ds24.getUID4(&uid);
   Serial.println(uid, HEX);
-  Serial.print("\compareUID4:\t ");
-  Serial.println(ds24.compareUID4(uid));
+  Serial.print("compareUID4:\t ");
+  Serial.println(ds24.compareUID4(&uid));
 
   Serial.println("\ndone...");
 }

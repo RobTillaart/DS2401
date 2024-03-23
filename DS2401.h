@@ -47,7 +47,7 @@ public:
 
   bool compareUID(uint8_t * buffer)
   {
-    return memcmp(buffer, _address, 8);
+    return !memcmp(buffer, _address, 8);
   }
 
 
@@ -59,19 +59,19 @@ public:
 
   bool compareUID6(uint8_t * buffer)
   {
-    return memcmp(buffer, &_address[1], 6);
+    return !memcmp(buffer, &_address[1], 6);
   }
 
 
-  void getUID4(uint8_t * buffer)
+  void getUID4(uint32_t * buffer)
   {
     memcpy(buffer, &_address[1], 4);
   }
 
 
-  bool compareUID4(uint8_t * buffer)
+  bool compareUID4(uint32_t * buffer)
   {
-    return memcmp(buffer, &_address[1], 4);
+    return !memcmp(buffer, &_address[1], 4);
   }
 
 
