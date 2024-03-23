@@ -23,6 +23,7 @@ void setup()
   Serial.print("DS2401_LIB_VERSION: ");
   Serial.println(DS2401_LIB_VERSION);
 
+  ds24.begin(); // read UID
   Serial.print("\ngetUID:\t ");
   ds24.getUID(uid);
   for (int i = 0; i < 8; i++)
